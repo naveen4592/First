@@ -1,8 +1,0 @@
-Public class testclass{
-
-if(i == 2){
-  system.debug('Value is True');
-  }else
-  system.debug('Value is False');
-  
-  }
