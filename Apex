@@ -1,3 +1,6 @@
 Public class myClass{
-  //Code block
+  Public Static void myMethod(){
+    list<string> stg ;
+  
+  }
 }
