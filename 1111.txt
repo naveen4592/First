@@ -1,0 +1,59 @@
+   List<Task> lTask = new List<Task>();
+
+      if(Trigger.isAfter && trigger.isInsert) {
+           for(Lead l: Trigger.new) {
+
+               if(l.LeadSource == 'Property'){
+                 if(lead_rt.get(l.RecordTypeID).getName() != 'Registration') continue;
+                 task t = new Task( 
+                 whatID = l.id,
+                 Subject = 'Property',
+                 Priority = 'Normal',
+                 Status = 'Not Started',
+                 Type = 'Action',					3*****Feasibility_Status__c =='Pending With ASP'
+                 ownerID - l.ownerID					1*****Provider_Name__c =='Radwin With TTSL Backhaul'
+                 );							2*****Feasibility_Response_A__c =Custom Object Feasibility Response
+                 lTask.add(t);   					4*****Feasibility_Task__c =Custom Object Feasibility Task
+               }							5*****Assigned_To__c== 'ASP India'
+            }
+        insert t;
+      }
+
+public class Account_Trigger_Handler {
+    //when ever a new account is created with industry as banking then set ownership as public
+    Public static void beforeInsertOwnerShip(List<Account>  accList){
+        for(Account a :accList){
+            if(a.Industry=='Banking'){ 
+                a.Ownership='Public';
+                system.debug('Trigger1 ownership is updated ');
+            }
+        }
+    }
+    //Recursive trigger
+    public static Boolean isFirstTime = true;
+    public static void Recursive(List<Account> accList){  
+        if(isFirstTime==False){
+             Set<Id> accountIds = new set<id>();
+        for(Account a :accList){
+            accountIds.add(a.Id);
+        }
+        List<Account> newAccList = [select Id,Name,Ownership from Account where Id !=:accountIds];
+        For(Account a :newAccList){
+             a.Ownership='Public';
+        }
+        update newAccList;
+        }
+
+Feasibility_Response_A__c
+
+
+public class FeasibilityResponseHandler {
+    //When ever new record is created with provider Name = 'Redwin' create new task.
+    public static void afterinsertTaskcreate(list<Feasibility_Response_A__c> FRtask,
+                                              boolean isBeforeInsert){
+       for(Feasibility_Response_A__c FRA :FRtask){}                                                  
+	//Map<id,schema.RecordTypeInfo> feas_RT=
+        if(Feasibility_Response_A__c.Provider_Name__c == 'Redwin'){	
+    }
+}
+}
