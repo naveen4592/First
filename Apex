@@ -1,6 +1,12 @@
 Public class myClass{
+Method1
+  //Code block
+  //Method One
+  public static void firstMethod(){
+  //code block 
+  }
   Public Static void myMethod(){
     list<string> stg ;
-  
   }
+ master
 }
