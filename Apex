@@ -1,5 +1,5 @@
 Public class myClass{
-Method1
+
   //Code block
   //Method One
   public static void firstMethod(){
@@ -8,5 +8,5 @@ Method1
   Public Static void myMethod(){
     list<string> stg ;
   }
- master
+ 
 }
