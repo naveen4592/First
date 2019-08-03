@@ -1,4 +1,9 @@
 Public class myClass{
+//Code block	
+  //Method One	
+  public static void firstMethod(){	
+  //code block 	
+  }
   Public Static void myMethod(){
     list<string> stg ;
   }
